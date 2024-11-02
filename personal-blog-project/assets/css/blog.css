@@ -1,0 +1,84 @@
+@import url("footer.css");
+
+.container {
+  display: grid;
+  grid-template-columns: 350px;
+  grid-template-rows: 50px 150px 700px 150px;
+  grid-template-areas:
+  "hd"
+  "title"
+  "content"
+  "ft";
+}
+
+.box {
+  border: 10px solid rgb(151, 182, 79);
+  background: #F8FA9D;
+}
+
+.header {
+  grid-area: hd;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header a {
+  text-decoration: none;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+}
+
+.header a:hover {
+  background-color: rgb(14, 190, 67);
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+  
+.title-img {
+  background-image: url("../../assets/img/appetites.jpg");
+  background-color: #F8FA9D;
+  background-position:
+    center;
+}
+
+.title h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(238, 208, 205);
+}
+
+.content {
+  grid-area: content;
+  padding: 5px;
+}
+
+.content h3 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.content p {
+  font-family:'Times New Roman', Times, serif;
+}
+
+.content blockquote {
+  margin-left: 0;
+}
+
+.footer {
+  grid-area: ft;
+}
+
+@media(min-width: 430px) {
+.container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 50px auto auto 150px;
+        grid-gap: 0px;
+        border: 10px solid rgb(151, 182, 79);
+    }
+}
